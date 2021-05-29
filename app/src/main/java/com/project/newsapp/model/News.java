@@ -107,7 +107,7 @@ public class News {
     }
 
     //Image Binding - I didn't write newsviewmodel for just this method
-    @BindingAdapter({"bind:imgUrl"})
+    @BindingAdapter({"imgUrl"})
     public static void setImage(ImageView imageView, String imgUrl) {
         Glide.with(imageView.getContext()).load(imgUrl).into(imageView);
     }
