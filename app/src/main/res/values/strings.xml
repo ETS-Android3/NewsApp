@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">News App</string>
+    <string name="app_name">NewNews</string>
     <string name="news_api_key" translatable="false">c16a745c1a0241e8a7d26efb1015b76f</string>
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>

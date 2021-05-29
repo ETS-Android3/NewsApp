@@ -5,11 +5,11 @@
 
         <variable
             name="news"
-            type="com.project.newsapp.model.News" />
+            type="com.rasitagac.newnews.model.News" />
 
         <variable
             name="clickListener"
-            type="com.project.newsapp.clicklisteners.AdapterItemClickListener" />
+            type="com.rasitagac.newnews.clicklisteners.AdapterItemClickListener" />
 
     </data>
 

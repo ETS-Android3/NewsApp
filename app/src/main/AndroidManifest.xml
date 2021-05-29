@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.project.newsapp">
+    package="com.rasitagac.newnews">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_news"
+        android:icon="@drawable/ic_newnews"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:roundIcon="@drawable/ic_news"
+        android:roundIcon="@drawable/ic_newnews"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".activities.MainActivity">
+        <activity android:name="com.rasitagac.newnews.activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

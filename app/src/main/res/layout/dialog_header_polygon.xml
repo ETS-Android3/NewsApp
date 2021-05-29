@@ -5,11 +5,11 @@
 
         <variable
             name="listener"
-            type="com.project.newsapp.clicklisteners.NewsDialogClickListeners" />
+            type="com.rasitagac.newnews.clicklisteners.NewsDialogClickListeners" />
 
         <variable
             name="news"
-            type="com.project.newsapp.model.News" />
+            type="com.rasitagac.newnews.model.News" />
     </data>
 
     <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
