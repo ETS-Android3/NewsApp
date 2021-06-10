@@ -13,4 +13,7 @@
     <string name="news_dialog_info">Daha fazla bilgi için Web sitesine gidin.</string>
     <string name="goto_website">Web sitesine Git</string>
     <string name="search_in_everything">Her şeyde ara...</string>
+    <string name="newnews">• NewNews •</string>
+    <string name="todo">TODO</string>
+    <string name="enticon">entIcon</string>
 </resources>

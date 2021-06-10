@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -10,9 +11,8 @@
             type="com.rasitagac.newnews.viewmodels.MainViewModel" />
     </data>
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/lyt_parent"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/lyt_parent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/white">
@@ -38,21 +38,20 @@
                     android:weightSum="1">
 
                     <ImageView
-                        android:id="@+id/ivToolbarCountry"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.1"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:onClick="countryClick"
-                        android:padding="@dimen/spacing_medium"
-                        android:src="@drawable/ic_turkey" />
+                            android:id="@+id/ivToolbarCountry"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:onClick="countryClick"
+                            android:padding="@dimen/spacing_medium"
+                            android:src="@drawable/ic_turkey" android:contentDescription="@string/todo"/>
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="?attr/actionBarSize"
                         android:layout_marginEnd="@dimen/spacing_large"
-                        android:layout_marginRight="@dimen/spacing_large"
                         android:layout_weight="0.9"
                         android:gravity="center"
                         android:orientation="horizontal">
@@ -64,7 +63,7 @@
                             android:focusable="true"
                             android:onClick="categoryClicked"
                             android:tag=""
-                            android:text="• News App •"
+                            android:text="@string/newnews"
                             android:textAppearance="@style/TextAppearance.AppCompat.Title"
                             android:textColor="@android:color/black"
                             app:fontFamily="sans-serif-medium" />
@@ -131,21 +130,21 @@
                                     android:layout_height="@dimen/dashboardNewsCategoryCardImageWidthHeight">
 
                                     <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_centerInParent="true"
-                                        android:tint="@android:color/white"
-                                        app:srcCompat="@drawable/shape_circle"
-                                        tools:ignore="UseAppTint" />
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerInParent="true"
+                                            android:tint="@android:color/white"
+                                            app:srcCompat="@drawable/shape_circle"
+                                            tools:ignore="UseAppTint" android:contentDescription="TODO"/>
 
                                     <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_centerInParent="true"
-                                        android:layout_margin="@dimen/dashboardNewsCategoryCardImageMargin"
-                                        android:src="@drawable/ic_business"
-                                        android:tint="@color/light_blue_400"
-                                        tools:ignore="UseAppTint" />
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerInParent="true"
+                                            android:layout_margin="@dimen/dashboardNewsCategoryCardImageMargin"
+                                            android:src="@drawable/ic_business"
+                                            android:tint="@color/light_blue_400"
+                                            tools:ignore="UseAppTint" android:contentDescription="TODO"/>
 
                                 </RelativeLayout>
 
@@ -195,21 +194,21 @@
                                     android:layout_height="@dimen/dashboardNewsCategoryCardImageWidthHeight">
 
                                     <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_centerInParent="true"
-                                        android:tint="@android:color/white"
-                                        app:srcCompat="@drawable/shape_circle"
-                                        tools:ignore="UseAppTint" />
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerInParent="true"
+                                            android:tint="@android:color/white"
+                                            app:srcCompat="@drawable/shape_circle"
+                                            tools:ignore="UseAppTint" android:contentDescription="@string/enticon"/>
 
                                     <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_centerInParent="true"
-                                        android:layout_margin="7dp"
-                                        android:src="@drawable/ic_entertainment"
-                                        android:tint="@color/pink_300"
-                                        tools:ignore="UseAppTint" />
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerInParent="true"
+                                            android:layout_margin="7dp"
+                                            android:src="@drawable/ic_entertainment"
+                                            android:tint="@color/pink_300"
+                                            tools:ignore="UseAppTint" android:contentDescription="TODO"/>
 
                                 </RelativeLayout>
 
@@ -257,21 +256,21 @@
                                     android:layout_height="@dimen/dashboardNewsCategoryCardImageWidthHeight">
 
                                     <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_centerInParent="true"
-                                        android:tint="@android:color/white"
-                                        app:srcCompat="@drawable/shape_circle"
-                                        tools:ignore="UseAppTint" />
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerInParent="true"
+                                            android:tint="@android:color/white"
+                                            app:srcCompat="@drawable/shape_circle"
+                                            tools:ignore="UseAppTint" android:contentDescription="TODO"/>
 
                                     <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_centerInParent="true"
-                                        android:layout_margin="@dimen/dashboardNewsCategoryCardImageMargin"
-                                        android:src="@drawable/ic_health"
-                                        android:tint="@color/light_green_300"
-                                        tools:ignore="UseAppTint" />
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerInParent="true"
+                                            android:layout_margin="@dimen/dashboardNewsCategoryCardImageMargin"
+                                            android:src="@drawable/ic_health"
+                                            android:tint="@color/light_green_300"
+                                            tools:ignore="UseAppTint" android:contentDescription="TODO"/>
 
                                 </RelativeLayout>
 
@@ -319,21 +318,21 @@
                                     android:layout_height="@dimen/dashboardNewsCategoryCardImageWidthHeight">
 
                                     <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_centerInParent="true"
-                                        android:tint="@android:color/white"
-                                        app:srcCompat="@drawable/shape_circle"
-                                        tools:ignore="UseAppTint" />
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerInParent="true"
+                                            android:tint="@android:color/white"
+                                            app:srcCompat="@drawable/shape_circle"
+                                            tools:ignore="UseAppTint" android:contentDescription="TODO"/>
 
                                     <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_centerInParent="true"
-                                        android:layout_margin="@dimen/dashboardNewsCategoryCardImageMargin"
-                                        android:src="@drawable/ic_science"
-                                        android:tint="@color/purple_300"
-                                        tools:ignore="UseAppTint" />
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerInParent="true"
+                                            android:layout_margin="@dimen/dashboardNewsCategoryCardImageMargin"
+                                            android:src="@drawable/ic_science"
+                                            android:tint="@color/purple_300"
+                                            tools:ignore="UseAppTint" android:contentDescription="@string/todo"/>
 
                                 </RelativeLayout>
 
@@ -381,21 +380,21 @@
                                     android:layout_height="@dimen/dashboardNewsCategoryCardImageWidthHeight">
 
                                     <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_centerInParent="true"
-                                        android:tint="@android:color/white"
-                                        app:srcCompat="@drawable/shape_circle"
-                                        tools:ignore="UseAppTint" />
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerInParent="true"
+                                            android:tint="@android:color/white"
+                                            app:srcCompat="@drawable/shape_circle"
+                                            tools:ignore="UseAppTint" android:contentDescription="TODO"/>
 
                                     <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_centerInParent="true"
-                                        android:layout_margin="@dimen/dashboardNewsCategoryCardImageMargin"
-                                        android:src="@drawable/ic_sports"
-                                        android:tint="@color/red_300"
-                                        tools:ignore="UseAppTint" />
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerInParent="true"
+                                            android:layout_margin="@dimen/dashboardNewsCategoryCardImageMargin"
+                                            android:src="@drawable/ic_sports"
+                                            android:tint="@color/red_300"
+                                            tools:ignore="UseAppTint" android:contentDescription="TODO"/>
 
                                 </RelativeLayout>
 
@@ -443,21 +442,21 @@
                                     android:layout_height="@dimen/dashboardNewsCategoryCardImageWidthHeight">
 
                                     <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_centerInParent="true"
-                                        android:tint="@android:color/white"
-                                        app:srcCompat="@drawable/shape_circle"
-                                        tools:ignore="UseAppTint" />
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerInParent="true"
+                                            android:tint="@android:color/white"
+                                            app:srcCompat="@drawable/shape_circle"
+                                            tools:ignore="UseAppTint" android:contentDescription="TODO"/>
 
                                     <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:layout_centerInParent="true"
-                                        android:layout_margin="@dimen/dashboardNewsCategoryCardImageMargin"
-                                        android:src="@drawable/ic_technology"
-                                        android:tint="@color/orange_300"
-                                        tools:ignore="UseAppTint" />
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_centerInParent="true"
+                                            android:layout_margin="@dimen/dashboardNewsCategoryCardImageMargin"
+                                            android:src="@drawable/ic_technology"
+                                            android:tint="@color/orange_300"
+                                            tools:ignore="UseAppTint" android:contentDescription="TODO"/>
 
                                 </RelativeLayout>
 
