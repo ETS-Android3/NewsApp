@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:bind="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
 
     <data class="NewsDialogBinding">
 
@@ -12,8 +14,7 @@
             type="com.rasitagac.newnews.model.News" />
     </data>
 
-    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="@android:color/white"
@@ -29,6 +30,8 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
+                android:background="#000000"
+                android:contentDescription="@string/cover_image"
                 android:scaleType="centerCrop"
                 bind:imgUrl="@{news.newsImage}" />
 
@@ -58,11 +61,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/spacing_medium"
-                    android:textStyle="bold"
                     android:gravity="center"
                     android:text="@string/news_dialog_info"
                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                    android:textColor="@color/grey_60" />
+                    android:textColor="@color/grey_60"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -79,9 +82,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/cancel"
                     android:onClick="@{()->listener.onDismissClick()}"
-                    android:textColor="@color/colorAccent" />
+                    android:text="@string/cancel"
+                    android:textColor="#D81B60" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     style="@style/Button.Primary.Borderless"

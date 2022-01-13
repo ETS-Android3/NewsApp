@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AlertDialog;
@@ -61,11 +62,9 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner, A
     AdapterListNews adapterListNews;
     List<News> newsList;
 
-    private String firstControl = "firstControl";
-    private String countryPositionPref = "countryPositionPref";
+    private final String countryPositionPref = "countryPositionPref";
     SharedPreferences pref;
     private String[] countrys;
-    private TypedArray countrysIcons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner, A
         context = this;
         ButterKnife.bind(this);
         countrys = getResources().getStringArray(R.array.countrys);
-        countrysIcons = getResources().obtainTypedArray(R.array.countrysIcons);
+        @SuppressLint("Recycle") TypedArray countrysIcons = getResources().obtainTypedArray(R.array.countrysIcons);
 
         initToolbar();
 
@@ -85,19 +84,17 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner, A
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         recyclerView.setAdapter(adapterListNews);
 
-
         if (pref.contains(countryPositionPref))
             ivToolbarCountry.setImageResource(countrysIcons.getResourceId(pref.getInt(countryPositionPref, 0), 0));
 
         viewModel = ViewModelProviders.of(context).get(MainViewModel.class);
         viewModel.getNewsLiveData().observe(context, newsListUpdateObserver);
         viewModel.setApiKey(getString(R.string.news_api_key));
-        viewModel.setCountryCode(pref.getString(Util.COUNTRY_PREF, "tr"));
-
-
+        viewModel.setCountryCode(pref.getString(Util.COUNTRY_PREF, "gb"));
     }
 
     private void languageControl() {
+        String firstControl = "firstControl";
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N && !pref.getBoolean(firstControl, false)) {
             Locale primaryLocale = getResources().getConfiguration().getLocales().get(0);
             LocaleHelper.setLocale(MainActivity.this, primaryLocale.getLanguage());
@@ -155,20 +152,20 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner, A
         if (searchView != null) {
             searchView.setSearchableInfo(searchManager.getSearchableInfo(MainActivity.this.getComponentName()));
         }
+        assert searchView != null;
         searchView.setQueryHint(getString(R.string.search_in_everything));
-        if (searchView != null)
-            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-                @Override
-                public boolean onQueryTextSubmit(String query) {
-                    if (viewModel != null) viewModel.searchNews(query);
-                    return false;
-                }
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                if (viewModel != null) viewModel.searchNews(query);
+                return false;
+            }
 
-                @Override
-                public boolean onQueryTextChange(String newText) {
-                    return false;
-                }
-            });
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
         return true;
     }
 
@@ -181,6 +178,7 @@ public class MainActivity extends AppCompatActivity implements LifecycleOwner, A
     }
 
     Observer<List<News>> newsListUpdateObserver = new Observer<List<News>>() {
+        @SuppressLint("NotifyDataSetChanged")
         @Override
         public void onChanged(List<News> news) {
             newsList.clear();

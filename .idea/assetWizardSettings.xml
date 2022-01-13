@@ -63,25 +63,25 @@
                                 <PersistentState>
                                   <option name="children">
                                     <map>
+                                      <entry key="backgroundImage">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="imagePath" value="C:\Users\rasit\Downloads\IconKitchen-NewNews\android\res\mipmap-xxxhdpi\ic_launcher_background.png" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
                                       <entry key="foregroundClipArt">
                                         <value>
                                           <PersistentState>
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="ac4141" />
-                                                <entry key="imagePath" value="C:\Users\rasit\AppData\Local\Temp\baseline_fiber_new_24.xml" />
+                                                <entry key="imagePath" value="C:\Users\rasit\AppData\Local\Temp\ic_android_black_24dp.xml" />
                                                 <entry key="scalingPercent" value="90" />
-                                              </map>
-                                            </option>
-                                          </PersistentState>
-                                        </value>
-                                      </entry>
-                                      <entry key="foregroundClipartAsset">
-                                        <value>
-                                          <PersistentState>
-                                            <option name="values">
-                                              <map>
-                                                <entry key="url" value="file:/$PROJECT_DIR$/../../Sdk/icons/material/materialicons/fiber_new/baseline_fiber_new_24.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -93,8 +93,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\rasit\Desktop\newnews-ic_launcher.png" />
-                                                <entry key="scalingPercent" value="51" />
+                                                <entry key="imagePath" value="C:\Users\rasit\Downloads\IconKitchen-NewNews\android\res\mipmap-xxxhdpi\ic_launcher_foreground.png" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -126,14 +125,6 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
-                                    </map>
-                                  </option>
-                                  <option name="values">
-                                    <map>
-                                      <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="212421" />
-                                      <entry key="foregroundAssetType" value="CLIP_ART" />
-                                      <entry key="showSafeZone" value="false" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -297,11 +288,6 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
-                                    </map>
-                                  </option>
-                                  <option name="values">
-                                    <map>
-                                      <entry key="showSafeZone" value="false" />
                                     </map>
                                   </option>
                                 </PersistentState>
